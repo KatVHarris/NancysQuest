@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Nancy&apos;sQuest</name>
+    <description>Nancy against the Demogorgon to avenge her fallen friend. </description>
+    <version>1.0.0.0</version>
+    <author>Kat Harris</author>
+    <author-email></author-email>
+    <author-website>http://nancysquest.azurewebsites.net</author-website>
+    <app-id>com.strangekatstudios.nancysquest</app-id>
+    <unique-id>po27geeviiei</unique-id>
+    <saved-with-version>23300</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>StartScreen</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="TiledBackground1" sid="115148735164934">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\BG256.png" />
+        </object-type>
+        <object-type name="Sprite" sid="407991388565163">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="987020087724703">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="794738195386238" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\Nancy1.png">
+                        <collision-poly>
+                            <point x="0.117188" y="0.117188" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.703125" y="0.296875" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.648438" y="0.648438" />
+                            <point x="0.5" y="0.992188" />
+                            <point x="0.40625" y="0.59375" />
+                            <point x="0.398438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerBlock" sid="456645573260864">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="PlayerHealth" sid="562936951417283" type="number" />
+                <instance-variable name="PlayerDirection" sid="949729042235643" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="941225298437446">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="132890287098066">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804818305698881" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\PlayerBlock.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tree" sid="266413593592962">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="812132210030025">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="749490414522780" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\Tree.png">
+                        <collision-poly>
+                            <point x="0.75" y="0.375" />
+                            <point x="0.5" y="0.285156" />
+                            <point x="0.40625" y="0.296875" />
+                            <point x="0.976563" y="0.5" />
+                            <point x="0.5" y="0.964844" />
+                            <point x="0.40625" y="0.796875" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="DemiGorgan" sid="612896489381932">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Lives of DemiGorgan" name="Lives" sid="214943468369507" type="number" />
+                <instance-variable name="PrevXvalue" sid="436861367439909" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="364772327951488">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664882199193008" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\PlayerBlock.png">
+                        <collision-poly>
+                            <point x="0.078125" y="0.078125" />
+                            <point x="0.5" y="0.109375" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.859375" y="0.5" />
+                            <point x="0.953125" y="0.953125" />
+                            <point x="0.5" y="0.890625" />
+                            <point x="0.328125" y="0.671875" />
+                            <point x="0.015625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Attack1" sid="329042447290065">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="801484017657379">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="189182832010975">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="773273353558199" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\Attack1.png">
+                        <collision-poly>
+                            <point x="0.554688" y="0.554688" />
+                            <point x="0.5" y="0.171875" />
+                            <point x="0.890625" y="0.109375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.78125" y="0.78125" />
+                            <point x="0.5" y="0.898438" />
+                            <point x="0.570313" y="0.429688" />
+                            <point x="0.585938" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="386656656093376">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="446504246623652">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Grass1" sid="448605291650239">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\Grass32.png" />
+        </object-type>
+        <object-type name="BGTrees" sid="399346685752553">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\BackgroundTree.png" />
+        </object-type>
+        <object-type name="BGTrees2" sid="639738638921016">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\BackgroundTree.png" />
+        </object-type>
+        <object-type name="BGSky" sid="288264637861384">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="684241868712311" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\BGSky.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tree2" sid="394864906033063">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738581323636661" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\Treehole.png">
+                        <collision-poly>
+                            <point x="0.75" y="0.375" />
+                            <point x="0.5" y="0.285156" />
+                            <point x="0.40625" y="0.296875" />
+                            <point x="0.976563" y="0.5" />
+                            <point x="0.5" y="0.964844" />
+                            <point x="0.40625" y="0.796875" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Title" sid="144441701514679">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="555709538389335" speed="5">
+                    <frame duration="1" hotspotX="0.50051" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\Title.png">
+                        <collision-poly>
+                            <point x="0.159021" y="0.273684" />
+                            <point x="0.49949" y="0.226316" />
+                            <point x="0.856269" y="0.247368" />
+                            <point x="0.846075" y="0.5" />
+                            <point x="0.79001" y="0.638596" />
+                            <point x="0.49949" y="0.810526" />
+                            <point x="0.207951" y="0.642105" />
+                            <point x="0.167176" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MainTitle" sid="978759752729875">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729759672494710" speed="5">
+                    <frame duration="1" hotspotX="0.50051" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\Title.png">
+                        <collision-poly>
+                            <point x="0.159021" y="0.273684" />
+                            <point x="0.49949" y="0.226316" />
+                            <point x="0.856269" y="0.247368" />
+                            <point x="0.846075" y="0.5" />
+                            <point x="0.79001" y="0.638596" />
+                            <point x="0.49949" y="0.810526" />
+                            <point x="0.207951" y="0.642105" />
+                            <point x="0.167176" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="IntroPlayerBlock" sid="243671402800892">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="336481947453701">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="562690474695243" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\PlayerBlock.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="IntroPlatform" sid="805869373009123">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="978430196244175">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726672694148226" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\Grass32.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DemoGorgonSpirte" sid="212413363645877">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="284843266072367" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\Demogorgon.png">
+                        <collision-poly>
+                            <point x="0.078125" y="0.078125" />
+                            <point x="0.5" y="0.109375" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.859375" y="0.5" />
+                            <point x="0.953125" y="0.953125" />
+                            <point x="0.5" y="0.890625" />
+                            <point x="0.328125" y="0.671875" />
+                            <point x="0.015625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Health" sid="439206911903967">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="HealthNumber" sid="657113573370506">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="GameOverText" sid="577790039333404">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="680768087935073" speed="5">
+                    <frame duration="1" hotspotX="0.50051" hotspotY="0.5" original-source="C:\Users\kaharri\Documents\GitHub\Construct2\Images\GameOverText.png">
+                        <collision-poly>
+                            <point x="0.215087" y="0.370175" />
+                            <point x="0.49949" y="0.207018" />
+                            <point x="0.713558" y="0.492982" />
+                            <point x="0.786952" y="0.5" />
+                            <point x="0.794088" y="0.645614" />
+                            <point x="0.207951" y="0.642105" />
+                            <point x="0.231397" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>MainGame.xml</layout>
+        <layout>StartScreen.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>StartEvents.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="16" />
+        <global-instance type="Touch" uid="17">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

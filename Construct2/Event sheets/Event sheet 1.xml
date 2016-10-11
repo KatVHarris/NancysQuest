@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <comment>PlayerMovement is dictated by the block</comment>
+        <event-block sid="656239341770677">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="995642621312749" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="764403917293130" type="Sprite">
+                    <param id="0" name="Object">PlayerBlock</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="465748002406558" type="DemoGorgonSpirte">
+                    <param id="0" name="X">DemiGorgan.X</param>
+                    <param id="1" name="Y">DemiGorgan.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Camera Follow for player</comment>
+        <event-block sid="431101024730781">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="865227305897556" type="System" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Scroll to object" sid="378782270636600" type="System">
+                    <param id="0" name="Object">PlayerBlock</param>
+                </action>
+                <action id="-3" name="Set position" sid="809887663000534" type="Health">
+                    <param id="0" name="X"> ViewportLeft(0) + (ViewportRight(0) - ViewportLeft(0)) / 20</param>
+                    <param id="1" name="Y">ViewportTop(0)+(ViewportBottom(0)-ViewportTop(0))/20</param>
+                </action>
+                <action id="-3" name="Set position" sid="863734885989164" type="HealthNumber">
+                    <param id="0" name="X">ViewportLeft(0)+ (ViewportRight(0)-ViewportLeft(0))/20 + 35</param>
+                    <param id="1" name="Y">ViewportTop(0)+(ViewportBottom(0)-ViewportTop(0))/20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="300828312555342">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="354049924472472" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="340450513509453" type="DemiGorgan">
+                    <param id="0" name="Instance variable">PrevXvalue</param>
+                    <param id="1" name="Value">DemiGorgan.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="117999943621704">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="720007408935865" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="408898048234030" type="DemiGorgan">
+                    <param id="0" name="X">PlayerBlock.X</param>
+                    <param id="1" name="Y">PlayerBlock.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="482062137865873">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="260043737050417" type="DemiGorgan">
+                    <param id="0" name="Instance variable">PrevXvalue</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">DemiGorgan.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="820629688400215" type="DemoGorgonSpirte">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="559444950125366">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="186602977668522" type="DemiGorgan">
+                    <param id="0" name="Instance variable">PrevXvalue</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">DemiGorgan.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="278235542509038" type="DemoGorgonSpirte">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="908504938448441">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="560228809831935" type="DemiGorgan" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="620535629769477" type="DemiGorgan" />
+            </actions>
+        </event-block>
+        <event-block sid="596237317566013">
+            <conditions>
+                <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="434313682216653" type="DemiGorgan" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="493619559888475" type="DemiGorgan">
+                    <param id="0" name="X">PlayerBlock.X</param>
+                    <param id="1" name="Y">PlayerBlock.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="833848765000481">
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" sid="930381976729098" type="DemiGorgan" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="362167395121542" type="DemiGorgan">
+                    <param id="0" name="X">PlayerBlock.X</param>
+                    <param id="1" name="Y">PlayerBlock.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="392054227413156">
+            <conditions>
+                <condition id="0" name="On click" sid="649067135799167" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="254187461859990" type="PlayerBlock">
+                    <param id="0" name="Object">Attack1</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="474494211139011" type="Attack1">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="234277287346645">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="276299672942408" type="PlayerBlock">
+                    <param id="0" name="Object">DemiGorgan</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="505221706203296" type="Sprite">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="896103039902016" type="PlayerBlock">
+                    <param id="0" name="Instance variable">PlayerHealth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="578440601636889">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="434575866548941" type="Attack1">
+                    <param id="0" name="Object">DemiGorgan</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="105177223922394" type="Attack1" />
+                <action id="-12" name="Subtract from" sid="358306510844371" type="DemiGorgan">
+                    <param id="0" name="Instance variable">Lives</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="742932799239150">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="526803692297948" type="Attack1">
+                    <param id="0" name="Object">Tree</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="181832622943307" type="Attack1" />
+            </actions>
+        </event-block>
+        <comment>Destroy Enemy and Display Win and restart</comment>
+        <event-block sid="829624741198408">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="994426516304337" type="DemiGorgan">
+                    <param id="0" name="Instance variable">Lives</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="959671303981660" type="DemiGorgan" />
+                <action id="-15" name="Set visible" sid="847630963008668" type="GameOverText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="708009728389813" type="GameOverText">
+                    <param id="0" name="X"> ViewportLeft(0) + (ViewportRight(0) - ViewportLeft(0)) / 2</param>
+                    <param id="1" name="Y">ViewportTop(0) + (ViewportBottom(0) - ViewportTop(0)) / 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="530138437654596">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="977094139060541" type="PlayerBlock">
+                    <param id="0" name="Instance variable">PlayerHealth</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="509803091720285" type="GameOverText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="117202793012592" type="GameOverText">
+                    <param id="0" name="X"> ViewportLeft(0) + (ViewportRight(0) - ViewportLeft(0)) / 2</param>
+                    <param id="1" name="Y">ViewportTop(0) + (ViewportBottom(0) - ViewportTop(0)) / 2</param>
+                </action>
+                <action id="-9" name="Destroy" sid="699810251780798" type="Sprite" />
+                <action id="-9" name="Destroy" sid="368995830918426" type="PlayerBlock" />
+                <action behavior="Pathfinding" id="2" name="Stop" sid="232111550959984" type="DemiGorgan" />
+            </actions>
+        </event-block>
+        <event-block sid="112366591752467">
+            <conditions>
+                <condition behavior="8Direction" id="0" name="Is moving" sid="208455085585099" type="PlayerBlock" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="801160220725365">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="815910535412770" type="System">
+                            <param id="0" name="First value">PlayerBlock.8Direction.MovingAngle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="370857561530620" type="Sprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="443208425969757">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="945663291023064" type="System">
+                            <param id="0" name="First value">PlayerBlock.8Direction.MovingAngle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">180</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="142076548736329" type="PlayerBlock">
+                            <param id="0" name="Instance variable">PlayerDirection</param>
+                            <param id="1" name="Value">&quot;Left&quot;</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="595650843631116" type="Sprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="873349095187377">
+            <conditions>
+                <condition behavior="8Direction" id="0" name="Is moving" sid="101658761962493" type="PlayerBlock" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

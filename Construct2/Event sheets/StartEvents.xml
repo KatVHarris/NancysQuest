@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>StartEvents</name>
+    <events>
+        <event-block sid="625219707457584">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="625152804368397" type="IntroPlayerBlock">
+                    <param id="0" name="Object">Tree2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="882279318023767" type="System">
+                    <param id="0" name="Layout">MainGame</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="826575806675219">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="882015486425525" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="554624337818487" type="Sprite">
+                    <param id="0" name="X">IntroPlayerBlock.X</param>
+                    <param id="1" name="Y">IntroPlayerBlock.Y</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
