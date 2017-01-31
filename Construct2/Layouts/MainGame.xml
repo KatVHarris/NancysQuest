@@ -68,31 +68,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sprite" uid="1">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>214.438079834</x>
-                        <y>168.438079834</y>
-                        <z>0</z>
-                        <width>100.876159668</width>
-                        <height>100.876159668</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="PlayerBlock" uid="2">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -128,8 +103,8 @@
                         <x>155</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>72</width>
-                        <height>98</height>
+                        <width>64</width>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -559,7 +534,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>980.230285645</x>
+                        <x>1011.982299805</x>
                         <y>450.048278809</y>
                         <z>0</z>
                         <width>69.922653198</width>
@@ -578,6 +553,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -622,7 +600,7 @@
                 </instance>
                 <instance type="HealthNumber" uid="28">
                     <properties>
-                        <text>100</text>
+                        <text>3 Lives</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>@Arial Unicode MS,-24,400,0</font>
                         <color>255,255,255</color>
@@ -657,13 +635,39 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>324.814788818</x>
-                        <y>176.800857544</y>
+                        <x>539.696655273</x>
+                        <y>238.089660645</y>
                         <z>0</z>
                         <width>808.805908203</width>
                         <height>469.948364258</height>
                         <depth>0</depth>
                         <hotspotX>0.500509679</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NancySprite" uid="1">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>153.966812134</x>
+                        <y>290.204711914</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
