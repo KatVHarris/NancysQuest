@@ -212,6 +212,8 @@
                     <param id="1" name="Y">ViewportTop(0) + (ViewportBottom(0) - ViewportTop(0)) / 2</param>
                 </action>
                 <action id="-9" name="Destroy" sid="557113714979938" type="DemoGorgonSpirte" />
+                <action id="-9" name="Destroy" sid="771417159645435" type="PlayerBlock" />
+                <action id="33" name="Stop all" sid="365677750903551" type="AudioManager" />
             </actions>
         </event-block>
         <event-block sid="530138437654596">
@@ -233,6 +235,7 @@
                 <action id="-9" name="Destroy" sid="699810251780798" type="NancySprite" />
                 <action id="-9" name="Destroy" sid="368995830918426" type="PlayerBlock" />
                 <action behavior="Pathfinding" id="2" name="Stop" sid="232111550959984" type="DemiGorgan" />
+                <action id="33" name="Stop all" sid="473756659222541" type="AudioManager" />
             </actions>
         </event-block>
         <event-block sid="112366591752467">
@@ -274,12 +277,6 @@
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="873349095187377">
-            <conditions>
-                <condition behavior="8Direction" id="0" name="Is moving" sid="101658761962493" type="PlayerBlock" />
-            </conditions>
-            <actions />
         </event-block>
     </events>
 </c2eventsheet>

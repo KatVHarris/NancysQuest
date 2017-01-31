@@ -34,14 +34,17 @@
                 <action id="0" name="Play" sid="661308715510597" type="AudioManager">
                     <param id="0" name="Audio file">spacesynth1-4</param>
                     <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-3</param>
                     <param id="1" name="Tag (optional)">&quot;edge&quot;</param>
                 </action>
                 <action id="0" name="Play" sid="686962523739507" type="AudioManager">
                     <param id="0" name="Audio file">spacesynth1-4-oog</param>
                     <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-3</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="32" name="Add mute effect" sid="910843292550121" type="AudioManager">
+                    <param id="0" name="Tag">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
